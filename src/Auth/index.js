@@ -8,7 +8,7 @@ export const clearToken = () => window.localStorage.clear();
 
 export const logout = () => {
   window.localStorage.clear();
-  fetch('https://fedsvc-stage.pwc.com/ofiss/public/SignOut.aspx', {
+  fetch('http://localhost:4005/graphql', {
     method: 'POST',
   })
     .then(response => {
@@ -19,3 +19,4 @@ export const logout = () => {
     })
     .catch(error => console.log(error));
 };
+
